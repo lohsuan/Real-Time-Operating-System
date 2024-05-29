@@ -56,9 +56,11 @@ functionality in an interrupt. */
 /* TI includes. */
 #include "driverlib.h"
 
+#include <stdio.h>
+
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
 or 0 to run the more comprehensive test and demo application. */
-#define mainCREATE_SIMPLE_BLINKY_DEMO_ONLY	0
+#define mainCREATE_SIMPLE_BLINKY_DEMO_ONLY	1
 
 /*-----------------------------------------------------------*/
 
@@ -94,6 +96,8 @@ See http://www.freertos.org/a00111.html for more information. */
 #endif
 uint8_t ucHeap[ configTOTAL_HEAP_SIZE ] = { 0 };
 
+
+
 /*-----------------------------------------------------------*/
 
 int main( void )
@@ -107,7 +111,7 @@ int main( void )
 	of this file. */
 	#if( mainCREATE_SIMPLE_BLINKY_DEMO_ONLY == 1 )
 	{
-		main_blinky();
+	    main_blinky();
 	}
 	#else
 	{
